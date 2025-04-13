@@ -1,0 +1,132 @@
+\documentclass{londoncv}
+
+% Import packages
+\usepackage{nth}
+\usepackage{hyperref}
+
+% Set up document
+\hypersetup{
+  colorlinks=false,
+  hidelinks,
+  pdfauthor={Jane Doe},
+  pdftitle={CV of Jane Doe}
+}
+
+% Begin document
+\headertitle{Jane Doe \pipe Frontend Developer}
+\headersubtitle{
+	\icontext{\faEnvelope}{janedoe@email.co.uk} \pipe
+	\icontext{\faPhone}{+44-1234568900} \pipe
+	\icontext{\faMapMarker*}{London, United Kingdom} \\
+	\icontext{\faGithub}{\href{https://www.github.com}{janedoe}} \pipe
+	\icontext{\faKaggle}{\href{https://www.kaggle.com}{janedoe}} \pipe
+	\icontext{\faLinkedin}{\href{https://www.linkedin.com/in/}{linkedin.com/in/jane-doe}} \pipe
+}
+
+\begin{document}
+\maketitle
+
+\skills
+{
+	\item Expertise in JavaScript, HTML5, CSS3, and ReactJS.
+	\item Proficient in Redux, Node.js, and Express.js.
+	\item Strong understanding of responsive design principles and cross-browser compatibility.
+}
+{
+	\item Familiarity with version control systems (Git, SVN) and Agile methodologies.
+	\item Excellent problem-solving abilities and attention to detail.
+	\item Solid communication skills, both written and verbal.
+}
+
+\begin{cvcontainer}{Experience}
+
+
+
+	\chronologicalitem
+	{Jan. 2018--Present}
+	{Frontend Software Developer}
+	{XYZ Tech Ltd.}
+	{London}
+	{
+	\begin{itemize}
+		\item Collaborated with cross-functional teams to design, develop, and deploy user interfaces for web applications using ReactJS and Redux.
+		\item Implemented and maintained responsive designs for desktop and mobile platforms.
+		\item Contributed to the development of a company-wide style guide and component library.
+	\end{itemize}
+	}
+
+	\chronologicalitem
+	{May 2015--Dec. 2017}
+	{Frontend Software Engineer}
+	{ABC Solutions}
+	{Manchester}
+	{
+	\begin{itemize}
+		\item Developed and maintained user interfaces for various web applications using HTML5, CSS3, and JavaScript.
+		\item Worked closely with designers to ensure adherence to brand guidelines and design specifications.
+	\end{itemize}
+	}
+
+	\chronologicalitem
+	{Aug 2013--Apr. 2015}
+	{Junior Frontend Developer}
+	{DEF Technologies}
+	{Cardiff}
+	{
+	\begin{itemize}
+		\item Assisted in the creation of user interfaces for web applications using jQuery and Bootstrap.
+        	\item Tested and debugged frontend code to ensure proper functionality and compatibility across multiple browsers.
+	\end{itemize}
+	}
+\end{cvcontainer}
+
+\begin{cvcontainer}{Education}
+
+	\chronologicalitem
+	{2014--2015}
+	{Master's Degree in Software Engineering}
+	{University of Phonyville}
+	{Birmingham}
+	{
+	\begin{itemize}
+		\item Dissertation title: \textit{Frontend Architecture and Performance Optimization: Building Responsive User Interfaces with ReactJS and Redux}
+	\end{itemize}
+	}
+
+	\chronologicalitem
+	{2010--2013}
+	{Bachelor of Science in Computer Science}
+	{University of Fakeville}
+	{Liverpool}
+	{
+	\begin{itemize}
+		\item Awarded first-class honours.
+	\end{itemize}
+	}
+
+\end{cvcontainer}
+
+\begin{cvcontainer}{Certifications}
+	\chronologicalitem
+	{Mar. 2018}
+	{ReactJS Developer Certification}
+	{Fake Academy}
+	{}
+	{}
+
+	\chronologicalitem
+	{Feb. 2017}
+	{Professional Scrum Master I (PSM I)}
+	{Agile Institute}
+	{}
+	{}
+
+	\chronologicalitem
+	{Jun. 2015}
+	{Full Stack Web Development Bootcamp Completion}
+	{FakeCodeSchool}
+	{}
+	{}
+\end{cvcontainer}
+
+\end{document}

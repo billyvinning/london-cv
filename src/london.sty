@@ -1,0 +1,31 @@
+\RequirePackage{fontspec} % To specify fonts.
+\RequirePackage{microtype}
+\RequirePackage{enumitem}
+\RequirePackage{fontawesome5}
+
+\setmainfont{EB Garamond}
+
+\setlist{noitemsep}
+\setlist[itemize]{leftmargin=19pt}
+
+\newcommand\makecvheader[2]{
+\begin{center}
+	{\LARGE \bf #1} \bigskip \\
+	{\normalsize #2}
+\end{center}
+}
+
+\def\pipeskip{\,}
+
+\def\pipe{\pipeskip | \pipeskip}
+
+\def\sectionrule{\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}}\medskip}
+\newcommand\icontext[2]{#1 \, #2}
+
+\newcommand*\headertitle[1]{\gdef\@headertitle{#1}}
+\newcommand*{\@headertitle}{Insert Header Here}
+
+\newcommand*\headersubtitle[1]{\gdef\@headersubtitle{#1}}
+\newcommand*{\@headersubtitle}{Insert Subtitle Here}
+
+\newcommand\cvheader{\makecvheader{\@headertitle}{\@headersubtitle}}

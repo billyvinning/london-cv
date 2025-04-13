@@ -1,0 +1,53 @@
+\documentclass{londonletter}
+
+\usepackage{lipsum}
+\usepackage[UKenglish]{babel}% http://ctan.org/pkg/babel
+\usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=false,
+  hidelinks,
+  pdfauthor={Jane Doe},
+  pdftitle={Cover Letter of Jane Doe}
+}
+
+\headertitle{Jane Doe \pipe Frontend Developer}
+\headersubtitle{
+	\icontext{\faEnvelope}{janedoe@email.co.uk} \pipe
+	\icontext{\faPhone}{+44-1234568900} \pipe
+	\icontext{\faMapMarker*}{London, United Kingdom} \\
+	\icontext{\faGithub}{\href{https://www.github.com}{janedoe}} \pipe
+	\icontext{\faKaggle}{\href{https://www.kaggle.com}{janedoe}} \pipe
+	\icontext{\faLinkedin}{\href{https://www.linkedin.com/in/}{linkedin.com/in/jane-doe}} \pipe
+}
+
+\longindentation=0pt
+\signature{Jane Doe}
+\address{
+    4 Eastbourne Rd \\
+    Collier's End \\
+    SG11 8AX \\
+    United Kingdom
+}
+
+\begin{document}
+
+\raggedbottom
+
+\begin{letter}{
+    Jane Doe\\
+    49 Leicester Road \\
+    Avington \\
+    United Kingdom
+}
+    \cvheader
+    \bigskip
+
+    \opening{Dear Mr. Bloggs,}
+        \lipsum[1-3]
+    \closing{Yours sincerely,}
+    \encl{Curriculum vitae}
+\end{letter}
+
+\end{document}
