@@ -1,0 +1,34 @@
+name: Update Examples
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Install ImageMagick
+      run: |
+        apt-get update
+        apt-get install -y imagemagick --fix-missing
+
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Compile
+      run: make all update-examples
+
+    - name: Prevent dubious ownership error when committing
+      run: |
+        git config --global --add safe.directory /__w/london-cv/london-cv
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Auto update example artifacts"
+        file_pattern: 'examples/*.pdf examples/*.png'

@@ -13,8 +13,8 @@ all: ${CV_OUTPUT} ${COVERLETTER_OUTPUT}
 update-examples:
 	cp ${CV_OUTPUT} ${EXAMPLE_DIR}/${CV_OUTPUT}
 	cp ${COVERLETTER_OUTPUT} ${EXAMPLE_DIR}/${COVERLETTER_OUTPUT}
-	magick convert -flatten -density 300 ${CV_OUTPUT} -quality 100 ${EXAMPLE_DIR}/${CV_FNAME}.png
-	magick convert -flatten -density 300 ${COVERLETTER_OUTPUT} -quality 100 ${EXAMPLE_DIR}/${COVERLETTER_FNAME}.png
+	magick convert -flatten -density 300 ${CV_OUTPUT}[0] -quality 100 ${EXAMPLE_DIR}/${CV_FNAME}.png
+	magick convert -flatten -density 300 ${COVERLETTER_OUTPUT}[0] -quality 100 ${EXAMPLE_DIR}/${COVERLETTER_FNAME}.png
 
 clean:
 	rm -f $(patsubst %,$(CV_FNAME).%,log aux pdf out)

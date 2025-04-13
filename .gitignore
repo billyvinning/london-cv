@@ -1,5 +1,7 @@
 *.aux
 *.log
 *.out
-cv.pdf
-coverletter.pdf
+*.pdf
+*.png
+!examples/*.pdf
+!examples/*.png
