@@ -1,5 +1,7 @@
 # london-cv
 
+[![Update Examples](https://github.com/billyvinning/london-cv/actions/workflows/update-examples.yaml/badge.svg?branch=master)](https://github.com/billyvinning/london-cv/actions/workflows/update-examples.yaml)
+
 A sophisticated CV LaTeX template.
 
 ## Preview
