@@ -5,7 +5,7 @@ COVERLETTER_FNAME := coverletter
 COVERLETTER_TARGET := $(COVERLETTER_FNAME).tex
 COVERLETTER_OUTPUT := $(COVERLETTER_FNAME).pdf
 EXAMPLE_DIR := examples
-EXE := xelatex
+EXE := lualatex
 OPTS := -halt-on-error
 ENV := TEXINPUTS="./src/:"
 all: ${CV_OUTPUT} ${COVERLETTER_OUTPUT}

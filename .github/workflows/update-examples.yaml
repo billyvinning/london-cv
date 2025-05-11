@@ -16,7 +16,22 @@ jobs:
     - name: Install ImageMagick
       run: |
         apt-get update
-        apt-get install -y imagemagick --fix-missing
+        apt-get install -y imagemagick wget --fix-missing
+
+    - name: Install Cardo
+      env:
+        FONT_DIR: /usr/share/fonts/ttf/Cardo
+        BLOB_NAME: https://github.com/google/fonts/raw/bcc7728b619035379330e8a404e0ba6051126414/ofl/cardo
+        REGULAR_FONT_NAME: Cardo-Regular.ttf
+        ITALIC_FONT_NAME: Cardo-Italic.ttf
+        BOLD_FONT_NAME: Cardo-Bold.ttf
+      run: |
+        mkdir -p $FONT_DIR
+        wget -O $FONT_DIR/$REGULAR_FONT_NAME $BLOB_NAME/$REGULAR_FONT_NAME
+        wget -O $FONT_DIR/$ITALIC_FONT_NAME $BLOB_NAME/$ITALIC_FONT_NAME
+        wget -O $FONT_DIR/$BOLD_FONT_NAME $BLOB_NAME/$BOLD_FONT_NAME
+        fc-cache -f
+        fc-list
 
     - name: Checkout repo
       uses: actions/checkout@v4

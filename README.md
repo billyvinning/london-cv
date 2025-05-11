@@ -16,7 +16,7 @@ Edit the files `cv.tex`, `coverletter.tex`.
 
 ## Build
 
-The document is compiled with `xelatex`. EB Garamond is the default font. To build the document, execute the following at the root of the package directory:
+The document is compiled with `lualatex`. Cardo is the default font. To build the document, execute the following at the root of the package directory:
 
 ```
 make clean && make
